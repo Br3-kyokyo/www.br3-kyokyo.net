@@ -1,18 +1,8 @@
 <template lang="pug">
   .main
-    .desktop-container.is-hidden.wip
-      .left-pane
-        h1 自己紹介
-        h2 名前
-        p きょっきょ
-      .right-pane
-        .right-upper
-          span.copy 
-        .right-bottom
-          .sentence 
-            ._01 Hello!
-            ._02 The existing humankind.
-            ._03 自分らしく。考え、変わり続ける。 
+
+    .desktop-container-draft.is-hidden-touch
+      .upper-pane
         .links
           a.logo(href="https://github.com/Br3-kyokyo" target="_blank")
             img(src="~/static/github.png")
@@ -22,51 +12,20 @@
             img(src="~/static/qiita.png")
           a.logo(href="https://br3-kyokyo.hatenadiary.com/" target="_blank")
             img(src="~/static/hatenablog.svg")
-          a.logo(href="https://note.mu/br3_kyokyo" target="_blank")
-            img(src="~/static/note.svg")
-          a.logo(href="https://www.wantedly.com/users/62636991" target="_blank")
-            img(src="~/static/wantedly.svg")
-          a.logo(href="https://atcoder.jp/users/Br3kyokyo" target="_blank")
-            img(src="~/static/atcoder.png")
-          a.logo(href="https://peing.net/ja/br3_kyokyo" target="_blank")
-            img(src="~/static/peing.png")
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    .desktop-container-draft.is-hidden-touch
-
-      .upper-pane
-        .upper-pane-overlayer
-          span.logo Br3-kyokyo.net
-        .upper-left
+      .middle-pane
+        .middle-pane-overlayer
+          //span.logo Br3-kyokyo.net
+          img.logo(src="~/static/logo.svg")
+        .middle-left
           .triad-first
           .triad-4th
-        .upper-right
+        .middle-right
           .triad-second            
           .triad-third
 
       .bottom-pane
         .links
-          a.logo(href="https://github.com/Br3-kyokyo" target="_blank")
-            img(src="~/static/github.png")
-          a.logo(href="https://twitter.com/Br3_kyokyo" target="_blank")
-            img(src="~/static/twitter.svg")
-          a.logo(href="https://qiita.com/Br3-kyokyo" target="_blank")
-            img(src="~/static/qiita.png")
-          a.logo(href="https://br3-kyokyo.hatenadiary.com/" target="_blank")
-            img(src="~/static/hatenablog.svg")
           a.logo(href="https://note.mu/br3_kyokyo" target="_blank")
             img(src="~/static/note.svg")
           a.logo(href="https://www.wantedly.com/users/62636991" target="_blank")
@@ -77,7 +36,6 @@
             img(src="~/static/peing.png")
             
     .mobile-container.is-hidden-desktop
-
       .upper-pane
         .upper-left
           .triad-first
@@ -287,13 +245,13 @@
   display: flex;
   flex-direction: column;
 
-  .upper-pane {
+  .middle-pane {
     height: 60vh;
     width: 100vw;
     display: flex;
     position: relative;
 
-    .upper-pane-overlayer {
+    .middle-pane-overlayer {
       position: absolute;
       top: 0;
       left: 0;
@@ -305,6 +263,10 @@
       justify-content: center;
       align-content: center;
       align-items: center;
+      img.logo {
+        width: 60vw;
+      }
+
       span.logo {
         font-family: 'Noto Sans JP', sans-serif;
         font-weight: 1000;
@@ -315,7 +277,7 @@
       }
     }
 
-    .upper-left {
+    .middle-left {
       width: 40vw;
       background: $green;
 
@@ -329,7 +291,7 @@
         background: $green;
       }
     }
-    .upper-right {
+    .middle-right {
       width: 60vw;
       .triad-second {
         height: 30vh;
@@ -347,7 +309,23 @@
   }
 
   .bottom-pane {
-    height: 50vh;
+    height: 20vh;
+    width: 100vw;
+    .links {
+      height: 100%;
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-content: space-around;
+      .logo img {
+        height: 14vh;
+      }
+    }
+  }
+
+  .upper-pane {
+    height: 20vh;
     width: 100vw;
     .links {
       height: 100%;
