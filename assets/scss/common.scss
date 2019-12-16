@@ -3,23 +3,29 @@
 
 // 2. Set your own initial variables
 
+$yellow: #f8ff5d;
+$blue: #8db5ff;
+$red: #ff4747;
+$indigo: #8db5ff;
+$white: #f3fcf0;
+$altred: #ffa3a3;
 
-// Update blue
-$blue: #72d0eb;
-// Add pink and its invert
-$pink: #ffb3b3;
-$pink-invert: #fff;
-// Add a serif family
-$family-serif: 'Merriweather', 'Georgia', serif;
+// // Update blue
+// $blue: #72d0eb;
+// // Add pink and its invert
+// $pink: #ffb3b3;
+// $pink-invert: #fff;
+// // Add a serif family
+// $family-serif: 'Merriweather', 'Georgia', serif;
 
-// 3. Set the derived variables
-// Use the new pink as the primary color
-$primary: $pink;
-$primary-invert: $pink-invert;
-// Use the existing orange as the danger color
-$danger: $orange;
-// Use the new serif family
-$family-primary: $family-serif;
+// // 3. Set the derived variables
+// // Use the new pink as the primary color
+// $primary: $pink;
+// $primary-invert: $pink-invert;
+// // Use the existing orange as the danger color
+// $danger: $orange;
+// // Use the new serif family
+// $family-primary: $family-serif;
 
 // 4. Setup your Custom Colors
 $linkedin: #0077b5;
