@@ -1,69 +1,84 @@
 <template lang="pug">
   .main
 
-    .desktop-container-draft.is-hidden-touch
-      .upper-pane
-        .links
-          a.logo(href="https://github.com/Br3-kyokyo" target="_blank")
-            img(src="~/static/github.png")
-          a.logo(href="https://twitter.com/Br3_kyokyo" target="_blank")
-            img(src="~/static/twitter.svg")
-          a.logo(href="https://qiita.com/Br3-kyokyo" target="_blank")
-            img(src="~/static/qiita.png")
-          a.logo(href="https://br3-kyokyo.hatenadiary.com/" target="_blank")
-            img(src="~/static/hatenablog.svg")
 
-      .middle-pane
-        .middle-pane-overlayer
+    .desktop-container.is-hidden-touch
+      .upper-pane
+        .upper-pane-overlayer
           //span.logo Br3-kyokyo.net
           img.logo(src="~/static/logo.svg")
-        .middle-left
+
+        .upper-left
           .triad-first
           .triad-4th
-        .middle-right
+        .upper-right
           .triad-second            
           .triad-third
 
       .bottom-pane
         .links
-          a.logo(href="https://note.mu/br3_kyokyo" target="_blank")
-            img(src="~/static/note.svg")
+          a.logo(href="https://twitter.com/Br3_kyokyo" target="_blank")
+            img(src="~/static/twitter.svg")
+          a.logo(href="https://br3-kyokyo.hatenadiary.com/" target="_blank")
+            img(src="~/static/hatenablog.svg")
+          //- a.logo(href="https://note.mu/br3_kyokyo" target="_blank")
+          //-   img(src="~/static/note.svg")
+          a.logo(href="https://github.com/Br3-kyokyo" target="_blank")
+            img(src="~/static/github.png")
+          a.logo(href="https://www.instagram.com/br3.kyokyo/" target="_blank")
+            img(src="~/static/instagram.png")
+          //- a.logo(href="https://qiita.com/Br3-kyokyo" target="_blank")
+          //-   img(src="~/static/qiita.png")
           a.logo(href="https://www.wantedly.com/users/62636991" target="_blank")
             img(src="~/static/wantedly.svg")
-          a.logo(href="https://atcoder.jp/users/Br3kyokyo" target="_blank")
-            img(src="~/static/atcoder.png")
+          //- a.logo(href="https://atcoder.jp/users/Br3kyokyo" target="_blank")
+          //-   img(src="~/static/atcoder.png")
+          a.logo(href="https://twitcasting.tv/br3_kyokyo" target="_blank")
+            img(src="~/static/twitcasting.png")
           a.logo(href="https://peing.net/ja/br3_kyokyo" target="_blank")
-            img(src="~/static/peing.png")
-            
+            img(src="~/static/peing.jpg")
+          //- a.logo(href="https://www.youtube.com/channel/UCdxQL-T5wzYYmJOKtZ3v_5g" target="_blank")
+          //-   img(src="~/static/youtube.png")
+
+
     .mobile-container.is-hidden-desktop
       .upper-pane
+        .upper-pane-overlayer
+          //span.logo Br3-kyokyo.net
+          img.logo(src="~/static/logo.svg")
         .upper-left
           .triad-first
           .triad-4th
         .upper-right
           .triad-second
-            p.urllogo Br3-kyokyo.net
           .triad-third
 
 
       .bottom-pane
         .links
-          a.logo(href="https://github.com/Br3-kyokyo" target="_blank")
-            img(src="~/static/github.png")
           a.logo(href="https://twitter.com/Br3_kyokyo" target="_blank")
             img(src="~/static/twitter.svg")
-          a.logo(href="https://qiita.com/Br3-kyokyo" target="_blank")
-            img(src="~/static/qiita.png")
           a.logo(href="https://br3-kyokyo.hatenadiary.com/" target="_blank")
             img(src="~/static/hatenablog.svg")
           a.logo(href="https://note.mu/br3_kyokyo" target="_blank")
             img(src="~/static/note.svg")
+          a.logo(href="https://github.com/Br3-kyokyo" target="_blank")
+            img(src="~/static/github.png")
+          a.logo(href="https://www.instagram.com/br3.kyokyo/" target="_blank")
+            img(src="~/static/instagram.png")
+          //- a.logo(href="https://qiita.com/Br3-kyokyo" target="_blank")
+          //-   img(src="~/static/qiita.png")
           a.logo(href="https://www.wantedly.com/users/62636991" target="_blank")
             img(src="~/static/wantedly.svg")
-          a.logo(href="https://atcoder.jp/users/Br3kyokyo" target="_blank")
-            img(src="~/static/atcoder.png")
+          //- a.logo(href="https://atcoder.jp/users/Br3kyokyo" target="_blank")
+          //-   img(src="~/static/atcoder.png")
+          a.logo(href="https://twitcasting.tv/br3_kyokyo" target="_blank")
+            img(src="~/static/twitcasting.png")
           a.logo(href="https://peing.net/ja/br3_kyokyo" target="_blank")
-            img(src="~/static/peing.png")
+            img(src="~/static/peing.jpg")
+          //- a.logo(href="https://www.youtube.com/channel/UCdxQL-T5wzYYmJOKtZ3v_5g" target="_blank")
+          //-   img(src="~/static/youtube.png")
+
 
 </template>
 
@@ -182,6 +197,31 @@
     height: 50vh;
     width: 100vw;
     display: flex;
+    position: relative;
+
+    .upper-pane-overlayer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      img.logo {
+        width: 90vw;
+      }
+      .urllogo {
+        height: auto;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 900;
+        font-size: 2em;
+        font-kerning: 5px;
+      }
+    }
 
     .upper-left {
       width: 25vw;
@@ -206,13 +246,6 @@
         justify-content: center;
         align-content: center;
         align-items: center;
-        .urllogo {
-          height: auto;
-          font-family: 'Noto Sans JP', sans-serif;
-          font-weight: 900;
-          font-size: 2em;
-          font-kerning: 5px;
-        }
       }
       .triad-third {
         height: 25vh;
@@ -239,19 +272,19 @@
   }
 }
 
-.desktop-container-draft {
+.desktop-container {
   height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
 
-  .middle-pane {
+  .upper-pane {
     height: 60vh;
     width: 100vw;
     display: flex;
     position: relative;
 
-    .middle-pane-overlayer {
+    .upper-pane-overlayer {
       position: absolute;
       top: 0;
       left: 0;
@@ -264,7 +297,7 @@
       align-content: center;
       align-items: center;
       img.logo {
-        width: 60vw;
+        width: 70vw;
       }
 
       span.logo {
@@ -277,7 +310,7 @@
       }
     }
 
-    .middle-left {
+    .upper-left {
       width: 40vw;
       background: $green;
 
@@ -291,7 +324,7 @@
         background: $green;
       }
     }
-    .middle-right {
+    .upper-right {
       width: 60vw;
       .triad-second {
         height: 30vh;
@@ -309,23 +342,7 @@
   }
 
   .bottom-pane {
-    height: 20vh;
-    width: 100vw;
-    .links {
-      height: 100%;
-      display: flex;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-content: space-around;
-      .logo img {
-        height: 14vh;
-      }
-    }
-  }
-
-  .upper-pane {
-    height: 20vh;
+    height: 40vh;
     width: 100vw;
     .links {
       height: 100%;
@@ -335,8 +352,12 @@
       flex-wrap: wrap;
       justify-content: space-around;
       align-content: space-around;
-      .logo img {
-        height: 14vh;
+
+      a.logo {
+        height: 19.5vh;
+        img {
+          height: 19.5vh;
+        }
       }
     }
   }
