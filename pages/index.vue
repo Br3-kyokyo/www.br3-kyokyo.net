@@ -1,11 +1,8 @@
 <template lang="pug">
   .main
-
-
     .desktop-container.is-hidden-touch
       .upper-pane
         .upper-pane-overlayer
-          //span.logo Br3-kyokyo.net
           img.logo(src="~/static/logo.svg")
 
         .upper-left
@@ -44,7 +41,6 @@
     .mobile-container.is-hidden-desktop
       .upper-pane
         .upper-pane-overlayer
-          //span.logo Br3-kyokyo.net
           img.logo(src="~/static/logo.svg")
         .upper-left
           .triad-first
@@ -83,108 +79,10 @@
 </template>
 
 <style lang="scss">
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
-
 .main {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-}
-
-.desktop-container {
-  min-height: 100%;
-  min-width: 100%;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  vertical-align: center;
-  display: flex;
-
-  .column {
-    padding: 0;
-  }
-
-  .left-pane {
-    height: 100vh;
-    width: 20vw;
-    background: $altred;
-  }
-
-  .right-pane {
-    max-height: 100%;
-    width: 80%;
-    margin: 0%;
-    .right-upper {
-      height: 10vh;
-      background: $blue;
-      text-align: right;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      .copy {
-        color: white;
-        margin-right: 5vw;
-      }
-    }
-
-    .right-bottom {
-      height: 40vh;
-      background: $blue;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      position: relative;
-      .sentence {
-        margin-right: 5vw;
-        text-align: right;
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        width: 70vw;
-        color: black;
-        font-family: 'Times New Roman', Times, serif;
-        ._01 {
-          position: absolute;
-          left: -50vw;
-          top: -10vh;
-          width: 100vw;
-          font-size: 15em;
-          text-shadow: 3px;
-          opacity: 0.8;
-        }
-        ._02 {
-          position: absolute;
-          left: 0px;
-          top: 170px;
-          width: 80vw;
-          font-size: 5em;
-          opacity: 0.5;
-        }
-        ._03 {
-          position: absolute;
-          left: -3vw;
-          top: 15vh;
-          width: 80vw;
-          font-size: 1em;
-          opacity: 1;
-        }
-      }
-    }
-    .links {
-      height: 50vh;
-      display: flex;
-      align-items: flex-start;
-      margin: 10px;
-
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-content: space-around;
-      .logo img {
-        height: 20vh;
-        width: auto;
-      }
-    }
-  }
 }
 
 .mobile-container {
@@ -213,13 +111,6 @@
       align-items: center;
       img.logo {
         width: 90vw;
-      }
-      .urllogo {
-        height: auto;
-        font-family: 'Noto Sans JP', sans-serif;
-        font-weight: 900;
-        font-size: 2em;
-        font-kerning: 5px;
       }
     }
 
@@ -299,15 +190,6 @@
       img.logo {
         width: 70vw;
       }
-
-      span.logo {
-        font-family: 'Noto Sans JP', sans-serif;
-        font-weight: 1000;
-        font-size: 6em;
-        letter-spacing: 2px;
-        //text-shadow: ivory 0 0 10px;
-        //-webkit-text-stroke: 2px ivory;
-      }
     }
 
     .upper-left {
@@ -363,3 +245,9 @@
   }
 }
 </style>
+
+<script>
+export default {
+  layout: 'plane'
+}
+</script>
