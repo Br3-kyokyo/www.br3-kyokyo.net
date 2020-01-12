@@ -67,5 +67,7 @@ export default {
   },
   styleResources: {
     scss: ['~/assets/scss/common.scss']
-  }
+  },
+  srcDir: './client/',
+  serverMiddleware: ['~~/api/']
 }
