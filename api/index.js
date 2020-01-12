@@ -33,10 +33,14 @@ ${text}
   // eslint-disable-next-line handle-callback-err
   mg.messages()
     .send(data)
-    .then((body) => console.log(body))
-    .catch((err) => console.error(err))
-
-  res.send('hoge')
+    .then((body) => {
+	    console.log(body)
+    	    res.send("送信されました！")
+    })
+    .catch((err) => {
+	    console.error(err)
+    	    res.send("エラーが発生しました！お急ぎの場合br3.kyokyo@gmail.comへご連絡ください。")
+    })
 })
 
 module.exports = {

@@ -68,11 +68,11 @@ export default {
       this.$axios
         .$post(`https://${location.hostname}/api/mailsender`, data)
         .then((response) => {
-          alert('送信されました！')
+          alert(response)
           this.$router.push('/apps/reception_training/ios')
         })
         .catch((error) => {
-          alert(`エラー: ${error}`)
+          alert(error)
         })
     }
   }
