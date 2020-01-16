@@ -61,12 +61,13 @@ export default {
       const data = {
         name: this.name,
         email: this.email,
+        type: 'okyaku-ios webform',
         subject: this.subject,
         text: this.text
       }
 
       this.$axios
-        .$post(`https://${location.hostname}/api/mailsender`, data)
+        .$post(`https://br3-kyokyo.net/apiserver/mailsender/`, data)
         .then((response) => {
           alert(response)
           this.$router.push('/apps/reception_training/ios')
