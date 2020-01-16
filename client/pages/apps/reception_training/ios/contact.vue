@@ -1,43 +1,39 @@
 <template lang="pug">
-  .section
-    .content
-      h1 「英語で接客訓練」サービスページ
-      hr
-      h2 ご意見・お問い合わせ
-      .contact_form_body
-        p.error_pane(v-if="errors.length")
-          ul
-            li(v-for="error in errors") {{ error }}
-        .field
-          label.label 
-            span お名前
-          .control
-            input.input(v-model="name" type="text" id="name" name="name" placeholder="e.g. 宮沢賢治, 賢治, miyaken, ...")
-        .field
-          label.label 
-            span メールアドレス
-            span.has-text-danger *
-          .control
-            input.input(v-model="email" type="email" id="email" name="email" placeholder="address@example.com")
-        .field
-          label.label
-            span 件名
-            span.has-text-danger *
-          .control
-            input.input(v-model="subject" type="text" id="subject" name="subject")
-        .field
-          label.label
-            span 本文
-            span.has-text-danger *
-          textarea.textarea(v-model="text" type="textarea" id="text" name="text")
-        .field
-          .control
-            button.button(name="submit" type="submit" v-on:click="mailsend") send
+  .okyaku-body
+    h2 ご意見・お問い合わせ
+    .contact_form_body
+      p.error_pane(v-if="errors.length")
+        ul
+          li(v-for="error in errors") {{ error }}
+      .field
+        label.label 
+          span お名前
+        .control
+          input.input(v-model="name" type="text" id="name" name="name" placeholder="e.g. 宮沢賢治, 賢治, miyaken, ...")
+      .field
+        label.label 
+          span メールアドレス
+          span.has-text-danger *
+        .control
+          input.input(v-model="email" type="email" id="email" name="email" placeholder="address@example.com")
+      .field
+        label.label
+          span 件名
+          span.has-text-danger *
+        .control
+          input.input(v-model="subject" type="text" id="subject" name="subject")
+      .field
+        label.label
+          span 本文
+          span.has-text-danger *
+        textarea.textarea(v-model="text" type="textarea" id="text" name="text")
+      .field
+        .control
+          button.button(name="submit" type="submit" v-on:click="mailsend") send
 </template>
 
 <style lang="scss">
 .section {
-  background-color: white;
   .content {
     .error_pane {
       background-color: red;
@@ -52,7 +48,7 @@
 
 <script>
 export default {
-  layout: 'default',
+  layout: 'okyaku',
   data() {
     return {
       name: '',

@@ -2,7 +2,13 @@
   div
     Header
     div.body
-      nuxt
+      .section
+        .content
+          h1
+            nuxt-link(to="/apps/reception_training/ios") 
+              p 「英語で接客訓練」サービスページ
+          hr
+          nuxt
 </template>
 
 <style lang="scss">

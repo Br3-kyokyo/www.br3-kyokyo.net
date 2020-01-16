@@ -55,3 +55,23 @@ $colors: map-merge($colors, $addColors);
 
 // 6. Import the rest of Bulma
 @import '~bulma/bulma';
+
+// custom scss
+html {
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: $white;
+
+  .section {
+    background-color: white;
+  }
+}
+
+a {
+  p {
+    color: $grey-darker;
+    &:hover {
+      color: $grey-dark;
+    }
+  }
+}
