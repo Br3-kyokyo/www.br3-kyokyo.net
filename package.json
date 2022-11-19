@@ -19,7 +19,7 @@
     "bulma": "^0.8.0",
     "forever": "^2.0.0",
     "node-sass": "^4.13.0",
-    "nuxt": "^2.11.0",
+    "nuxt": "^2.15.8",
     "nuxt-sass-resources-loader": "^2.0.5",
     "pug": "^2.0.4",
     "pug-loader": "^2.4.0",
